@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>Sign Up</h1>
+    <div class="signUp">
+      <div class="left"></div>
+      <div class="right">
+        <div id="form" class="modal">
+          <form class="modal-content" action="entry" id="form">
+            <label for="first-name"></label>
+            <input
+              type="text"
+              placeholder="Enter your first name"
+              name="first-name"
+              required
+              id="firstName"
+            />
+
+            <label for="last-name"></label>
+            <input
+              type="text"
+              placeholder="Enter your last name"
+              name="last-name"
+              required
+              id="lastName"
+            />
+
+            <label for="user-name"></label>
+            <input
+              type="text"
+              placeholder="Enter your Username"
+              name="user-name"
+              required
+              id="userName"
+            />
+
+            <label for="email"></label>
+            <input
+              type="text"
+              placeholder="Enter your email here"
+              name="email"
+              required
+              id="email"
+            />
+
+            <label for="password"></label>
+            <input
+              type="text"
+              placeholder="Enter your password"
+              name="password"
+              required
+              id="password"
+            />
+
+            <div class="foot">
+              <label>
+                <input type="checkbox" />
+              </label>
+
+              <h5>I agree to all terms</h5>
+            </div>
+            <div class="btn">
+              <button type="submit" id="button" class="btn">Register</button>
+            </div>
+          </form>
+        </div>
+        <div class="last-foot">
+          <h5>Already have an account?</h5>
+          <a href="sign In.html">Sign In</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

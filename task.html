@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <link rel="stylesheet" href="task.css" />
+  </head>
+  <body>
+    <div class="whole-page">
+      <div class="left-dash">
+        <div class="person">
+          <img src="./images/snapshot.jpg" alt="person image" />
+          <h4>Exhibit<br />ernest5arthur@gmail.com</h4>
+        </div>
+        <div class="white-dash">
+          <button class="dash-link">Dashboard</button>
+        </div>
+        <div class="vital-task">
+          <a href="Vital Task">Vital Task</a>
+        </div>
+        <div class="my-task">
+          <a href="dashboard.html">My Task</a>
+        </div>
+        <div class="categories">
+          <a href="Task Categories">Text Categories</a>
+        </div>
+        <div class="settings">
+          <a href="Settings">Settings</a>
+        </div>
+        <div class="help">
+          <a href="Help">Help</a>
+        </div>
+        <div class="logout">
+          <a href="sign In.html">Logout</a>
+        </div>
+      </div>
+      <div class="final-right">
+        <div class="pop-up">
+          <div class="upper-tab">
+            <h3>Add New Task</h3>
+            <a href="welcome.html">Go Back</a>
+          </div>
+          <div class="inputs">
+            <form action="entry">
+              <label for="Title">Title</label>
+              <input type="text" class="fill" name="Title" required />
+              <label for="Date">Date</label>
+              <input type="date" class="fill" name="Date" required />
+            </form>
+            <div id="priority">
+              <label
+                >Extreme
+                <input type="checkbox" />
+              </label>
+              <label
+                >Moderate
+                <input type="checkbox" />
+              </label>
+              <label
+                >Low
+                <input type="checkbox" />
+              </label>
+            </div>
+            <div id="last-section">
+              <div id="task-description">
+                Task Description
+                <form action="entry">
+                  <label for="description"></label>
+                  <input
+                    type="text"
+                    placeholder="start writing here..."
+                    id="description"
+                  />
+                </form>
+              </div>
+              <div id="upload-image">
+                <form action="" method="post" enctype="multipart/form-data">
+                  <input
+                    type="file"
+                    id="file"
+                    placeholder="upload a file"
+                    name="file"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="done-button">Done</button>
+      </div>
+    </div>
+  </body>
+</html>

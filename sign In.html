@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="sign In.css" />
+  </head>
+  <body>
+    <h1>Sign In</h1>
+
+    <div class="main-signin">
+      <div class="left">
+        <form action="entry" id="form">
+          <label for="user-name"></label>
+          <input
+            type="text"
+            placeholder="Enter Username"
+            name="user-name"
+            required
+            id="userName"
+          />
+
+          <label for="password"></label>
+          <input
+            type="text"
+            placeholder="Enter your password"
+            name="password"
+            required
+            id="password"
+          />
+          <div class="remember">
+            <input type="checkbox" />
+            <h5>Remember Me</h5>
+          </div>
+          <button type="submit" id="button">Login</button>
+        </form>
+
+        <div class="alternative">
+          <h5>Or, Login with</h5>
+          <div class="socials-img">
+            <img src="/images/facebook.svg" alt="facebook" />
+            <img src="/images/google.svg" alt="google" />
+            <img src="/images/twitter-x.svg" alt="twitter" />
+          </div>
+        </div>
+        <div class="last">
+          <h5>Don't have an account?</h5>
+          <a href="index.html">Create One</a>
+        </div>
+      </div>
+      <div class="right"></div>
+    </div>
+    <script src="sign In.js"></script>
+  </body>
+</html>

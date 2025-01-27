@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: ghostwhite;
+}
+.whole-page {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.left-dash {
+  height: 770px;
+  width: 250px;
+  background-color: black;
+  margin: 10px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.person {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  top: -20px;
+  left: 100px;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.person h4 {
+  color: white;
+  margin-left: 10px;
+}
+.person img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.white-dash button {
+  background-color: white;
+  background-image: url("/images/columns-gap.svg");
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 200px;
+  border-radius: 10px;
+  margin: 20px;
+  margin-top: 70px;
+  color: coral;
+}
+
+.vital-task a {
+  color: white;
+  margin-left: 50px;
+  background-image: url("images/lightbulb.svg");
+  background-repeat: no-repeat;
+  background-color: black;
+  text-decoration-line: none;
+}
+
+.my-task,
+.categories,
+.settings,
+.help {
+  margin-top: 30px;
+}
+.my-task a,
+.categories a,
+.settings a,
+.help a,
+.logout a {
+  color: white;
+  margin-left: 50px;
+  text-decoration-line: none;
+}
+
+.logout {
+  margin-top: 300px;
+}
+
+.right-welcome {
+  height: 300px;
+  width: 700px;
+  border: 1px solid black;
+  margin-top: 100px;
+}
+
+.welcome-text {
+  font-size: xx-large;
+  padding: 150px;
+}
+
+#go-home {
+  background-color: coral;
+  border-radius: 5px;
+  width: 100px;
+  height: 50px;
+}

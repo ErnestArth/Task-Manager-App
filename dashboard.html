@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="main-dash">
+      <div class="menu-bar">
+        <h2>Dashboard</h2>
+        <div class="search">
+          <form action="entry">
+            <input type="text" placeholder="search your task here" />
+            <!-- <input type="button" value="search" /> -->
+            <button type="button" id="search-button" class="click-serach">
+              <img src="/images/search.svg" alt="search button" />
+            </button>
+          </form>
+        </div>
+
+        <div class="icons">
+          <button id="notification">
+            <img src="/images/bell.svg" alt="notification icon" />
+          </button>
+          <button id="calender">
+            <img src="/images/calendar-week.svg" alt="calender icon" />
+          </button>
+        </div>
+        <div class="date">
+          <h5>Tuesday <br />20/06/2025</h5>
+        </div>
+      </div>
+
+      <div class="next-dash">
+        <div class="left-dash">
+          <div class="person">
+            <img src="./images/snapshot.jpg" alt="person image" />
+            <h4>Exhibit<br />ernest5arthur@gmail.com</h4>
+          </div>
+          <div class="white-dash">
+            <button class="dash-link">Dashboard</button>
+          </div>
+          <div class="vital-task">
+            <a href="Vital Task">Vital Task</a>
+          </div>
+          <div class="my-task">
+            <a href="dashboard.html">My Task</a>
+          </div>
+          <div class="categories">
+            <a href="Task Categories">Text Categories</a>
+          </div>
+          <div class="settings">
+            <a href="Settings">Settings</a>
+          </div>
+          <div class="help">
+            <a href="Help">Help</a>
+          </div>
+          <div class="logout">
+            <a href="sign In.html">Logout</a>
+          </div>
+        </div>
+
+        <div class="middle-dash">
+          <div class="taskbar">
+            <h3>My Tasks</h3>
+            <div class="add">
+              <button id="add-button">
+                <img src="/images/plus.svg" alt="add symbol" />
+              </button>
+            </div>
+          </div>
+
+          <div class="task-card complete">
+            <div class="inner-contents content">
+              <div class="small-circle color"></div>
+              <div class="document-text properties">
+                <h4><strong>Submit Documents</strong></h4>
+                <h5>Make sure to submit all the<br />necessary docum...</h5>
+                <h6>Priority: Extreme Status: Not Started</h6>
+              </div>
+              <div class="lap-image image">
+                <img src="./images/books.jpg" alt="book image" />
+                <h6>Created on 20-06-2024</h6>
+              </div>
+            </div>
+          </div>
+          <div class="task-card">
+            <div class="inner-info content">
+              <div class="small-circle-purple color"></div>
+              <div class="document-info properties">
+                <h4><strong>Complete assignments</strong></h4>
+                <h5>
+                  The assignments must be<br />completed to pass final year...
+                </h5>
+                <h6>Priority: Moderate Status: In Progress</h6>
+              </div>
+              <div class="lap-image image">
+                <img src="./images/laptop.jpg" alt="laptop image" />
+                <h6>Created on 20-06-2024</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="action-box">
+          <div class="upper">
+            <div class="left-book-image">
+              <img src="/images/books.jpg" alt="book image" />
+            </div>
+            <div class="right-text">
+              <h4>Submit Documents</h4>
+              <h5>Priority: Extreme<br />Status: Not Started</h5>
+              <h6>Created on 20/06/2024</h6>
+            </div>
+          </div>
+          <div class="bottom-text">
+            <h5><strong>Task Title:</strong> Document Submission.</h5>
+            <h5>
+              <strong>Objective:</strong> To submit required documents for
+              something important
+            </h5>
+            <h5>
+              Task Description: Review the list of documents required for
+              Submission and ensure all necessary documents are ready. <br />
+              Organize the documents accordingly and scan them if<br />
+              physical copies need to be submitted digitally. Rename the
+              <br />the scanned files appropriately for easy identification and
+              verify the accepted file formats. Upload the documents securely to
+              the designated platform, double-check for accuracy, and obtain
+              confirmation of successful submission. Follow up if necessary to
+              ensure proper processing.
+            </h5>
+            <h5>Additional Notes:</h5>
+            <ul>
+              <li>Ensure that the documents are authentic and up-to-date.</li>
+              <li>
+                Maintain confidentiality and security of sensitive information
+                during the submission process.
+              </li>
+              <li>
+                If there are specific guidelines or deadlines for submission,
+                adhere to them diligently
+              </li>
+            </ul>
+            <h5>Deadline for Submission: End of Day</h5>
+          </div>
+          <div class="bins">
+            <div class="box">
+              <button id="remove">
+                <img src="/images/trash.svg" alt="remove item" />
+              </button>
+            </div>
+            <div class="box">
+              <button id="add-note">
+                <img src="images/pencil-square.svg" alt="add note" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="myModal" class="final-right">
+      <div class="pop-up">
+        <div class="upper-tab">
+          <h3>Add New Task</h3>
+          <a href="welcome.html">Go Back</a>
+        </div>
+        <div class="inputs">
+          <form action="entry">
+            <label for="Title">Title</label>
+            <input type="text" class="fill" name="Title" required />
+            <label for="Date">Date</label>
+            <input type="date" class="fill" name="Date" required />
+          </form>
+          <div id="priority">
+            <label>
+              <input
+                type="radio"
+                class="task-priority"
+                name="priority"
+              />Extreme
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="task-priority"
+                name="priority"
+              />Moderate
+            </label>
+            <label>
+              <input type="radio" class="task-priority" name="priority" />Low
+            </label>
+          </div>
+          <div id="last-section">
+            <div id="task-description">
+              Task Description
+              <form action="entry">
+                <label for="description"></label>
+                <input
+                  type="text"
+                  placeholder="start writing here..."
+                  id="description"
+                />
+              </form>
+            </div>
+            <div id="upload-image">
+              <form method="post" enctype="multipart/form-data">
+                <input
+                  type="file"
+                  id="file"
+                  placeholder="upload a file"
+                  name="file"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+        <button id="done-button">Done</button>
+      </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>

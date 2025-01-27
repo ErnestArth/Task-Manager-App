@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: ghostwhite;
+}
+
+.main-signin {
+  display: flex;
+  flex-direction: row;
+}
+
+.left input {
+  height: 20px;
+  width: 600px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.remember {
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+  background-color: orangered;
+  height: 40px;
+  width: 70px;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  border-radius: 5%;
+}
+
+.alternative {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  column-gap: 20px;
+}
+
+.socials-img {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.last {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  margin: 10px;
+}
+
+.right {
+  background-image: url("/image.jpeg");
+  height: 350px;
+  width: 1440px;
+  margin-top: 15px;
+  background-repeat: no-repeat;
+  background-size: 650px 1440px;
+}
