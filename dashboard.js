@@ -71,7 +71,8 @@ function addElement(task) {
 
   taskDiv.appendChild(innerInfo);
 
-  document.querySelector(".middle-dash").prepend(taskDiv);
+  document.querySelector(".middle-dash").append(taskDiv);
+  addClickEventToTaskCard(taskDiv, task);
 }
 
 var modal = document.getElementById("myModal");
@@ -120,9 +121,79 @@ document.getElementById("done-button").addEventListener("click", function () {
       imgUrl: file.value.split("\\")[2],
     };
 
+    let existingTasks = JSON.parse(localStorage.getItem("tasks"));
+    existingTasks.push(newTask);
+
+    localStorage.setItem("tasks", JSON.stringify(existingTasks));
+
     addElement(newTask);
-    console.log(this);
   } else {
     alert("Form is incomplete");
+  }
+});
+
+// fetch("tasks.json")
+//   .then((response) => response.json())
+//   .then((data) => console.log(data));
+
+window.addEventListener("load", function () {
+  let savedTasks = JSON.parse(localStorage.getItem("tasks"));
+
+  if (savedTasks) {
+    savedTasks.forEach((task) => {
+      addElement(task);
+    });
+  }
+});
+
+function addClickEventToTaskCard(taskDiv, task) {
+  taskDiv.addEventListener("click", function () {
+    const actionTitle = document.getElementById("action-title");
+    const actionMessage = document.getElementById("action-message");
+    const actionTimeStamp = document.getElementById("action-timestamp");
+    const actionPriority = document.getElementById("action-priority");
+    const actionStatus = document.getElementById("action-status");
+    const actionImage = document.getElementById("action-image");
+
+    actionTitle.textContent = task.title;
+    actionMessage.textContent = task.message;
+    actionTimeStamp.textContent = task.timeStamp;
+    actionPriority.textContent = `Priority: ${task.priority}`;
+    actionStatus.textContent = `Status: ${task.status}`;
+    actionImage.setAttribute("src", "images/" + task.imgUrl);
+  });
+}
+
+const editButton = document.getElementById("add-note");
+
+editButton.addEventListener("click", function () {
+  const taskDescription = document.getElementById("action-message");
+  const allNotes = document.getElementById("notes-1");
+  const editing = editButton.textContent === "Save";
+
+  if (editing) {
+    // Save changes
+    const descriptionTextarea = taskDescription.querySelector("textarea");
+    taskDescription.textContent = descriptionTextarea.value;
+
+    // Saving each note
+    allNotes.querySelectorAll("li").forEach((note) => {
+      const noteTextarea = note.querySelector("textarea");
+      note.textContent = noteTextarea.value;
+    });
+
+    editButton.innerHTML = `<img src="images/pencil-square.svg" alt="edit note" />`;
+  } else {
+    // Enable editing
+    const descriptionText = taskDescription.textContent;
+    taskDescription.innerHTML = `<textarea>${descriptionText}</textarea>`;
+
+    // Making notes editable
+    allNotes.querySelectorAll("li").forEach((note) => {
+      const noteText = note.textContent;
+      note.innerHTML = `<textarea>${noteText}</textarea>`;
+    });
+
+    editButton.textContent = "Save"; // Change button to Save
   }
 });

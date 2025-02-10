@@ -12,7 +12,11 @@
         <h2>Dashboard</h2>
         <div class="search">
           <form action="entry">
-            <input type="text" placeholder="search your task here" />
+            <input
+              type="text"
+              placeholder="search your task here"
+              id="search-input"
+            />
             <!-- <input type="button" value="search" /> -->
             <button type="button" id="search-button" class="click-serach">
               <img src="/images/search.svg" alt="search button" />
@@ -104,24 +108,26 @@
           </div>
         </div>
 
-        <div class="action-box">
+        <div class="right-dash action-box">
           <div class="upper">
             <div class="left-book-image">
-              <img src="/images/books.jpg" alt="book image" />
+              <img id="action-image" src="/images/books.jpg" alt="book image" />
             </div>
             <div class="right-text">
-              <h4>Submit Documents</h4>
-              <h5>Priority: Extreme<br />Status: Not Started</h5>
-              <h6>Created on 20/06/2024</h6>
+              <h4 id="action-title">Submit Documents</h4>
+              <h5 id="action-priority">
+                Priority: Extreme<br />Status: Not Started
+              </h5>
+              <h6 id="action-timeStamp">Created on 20/06/2024</h6>
             </div>
           </div>
-          <div class="bottom-text">
+          <div class="bottom-text text">
             <h5><strong>Task Title:</strong> Document Submission.</h5>
             <h5>
               <strong>Objective:</strong> To submit required documents for
               something important
             </h5>
-            <h5>
+            <h5 id="action-message">
               Task Description: Review the list of documents required for
               Submission and ensure all necessary documents are ready. <br />
               Organize the documents accordingly and scan them if<br />
@@ -133,7 +139,7 @@
               ensure proper processing.
             </h5>
             <h5>Additional Notes:</h5>
-            <ul>
+            <ul id="notes-1">
               <li>Ensure that the documents are authentic and up-to-date.</li>
               <li>
                 Maintain confidentiality and security of sensitive information

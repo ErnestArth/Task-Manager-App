@@ -1,0 +1,30 @@
+{
+  "tasks": [
+    {
+      "title": "Read Books",
+      "message": "Make sure the books to complete task",
+      "timeStamp": "Created on 03/01/2025",
+      "priority": "Extreme",
+      "status": "In Progress",
+      "imgUrl": "./images/file-person.svg"
+    },
+
+    {
+      "title": "Prepare meal",
+      "message": "Prepare dinner for the family",
+      "timeStamp": "created on 03/01/2025",
+      "priority": "Moderate",
+      "status": "Not started",
+      "imgUrl": "./images/file-person-fill.svg"
+    },
+
+    {
+      "title": "Work on project",
+      "message": "Attend to your udemy course",
+      "timeStamp": "created on 05/01/2025",
+      "priority": "Moderate",
+      "status": "Not started",
+      "imgUrl": "./images/google.svg"
+    }
+  ]
+}
